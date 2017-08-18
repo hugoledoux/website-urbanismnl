@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css">
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="js/jquery.rss.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script>
+      jQuery(function($) {
+        $("#rss-feeds")
+          .rss("http://www.rssmix.com/u/8248344/rss.xml", {
+            limit: 10,
+            // effect: 'slideFastSynced',
+            layoutTemplate: '{entries}',
+            entryTemplate: '<p>{date} | <a href="{url}">{title}</a></p>'
+          })
+      })
+    </script>
+  </head>
+
+  <body>
+<section class="section">
+
+<div class="tile is-ancestor">
+        <div class="tile is-5 is-parent">
+          <article class="tile is-child">
+            <!-- <img src="urbanism-round.png"> -->
+            <figure class="image">
+            <a href="https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/"><img src="img/urbanism-logo.jpg"></a>
+            </figure>
+          </article>
+        </div>
+        <div class="tile is-5 is-parent">
+          <article class="tile is-child notification stat-tile">
+            <p class="title">Department of Urbanism at TU Delft</p>
+            <p class="subtitle">We are concerned with the design, analysis, and planning of cities and regions, with the goal of more sustainable, resilient, and fair societies. We combine knowledge and skills from urban design, spatial planning, landscape architecture, environmental technology and geoinformatics.</p>
+          </article>
+        </div>
+        <div class="tile is-parent is-vertical">
+          <article class="tile is-child notification has-text-centered is-info">
+            <i class="fa fa-snapchat"></i>
+          </article>
+          <article class="tile is-child notification has-text-centered is-info">
+            <i class="fa fa-twitter"></i>
+          </article>
+          <article class="tile is-child notification has-text-centered is-info">
+            <i class="fa fa-facebook"></i>
+          </article>
+        </div>
+      </div>
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child notification is-warning has-text-centered">
+                <a href="https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/education/"><p class="title">Our MSc programmes</p></a>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child ">
+                <figure class="image">
+                <script type="text/javascript">
+                  var imlocation = "img/";
+                  var images = [];
+                  var urls   = [];
+                  images.push('3dgi.jpg');
+                  urls.push('https://3d.bk.tudelft.nl');
+                  images.push('designpol.jpg');
+                  urls.push('https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/organisation/chairs/design-as-politics/');
+                  images.push('envtech.png');
+                  urls.push('https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/organisation/chairs/environmental-technology-and-design/');
+                  images.push('la.jpg');
+                  urls.push('https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/organisation/chairs/landscape-architecture/');
+                  images.push('urbandesign.jpg');
+                  urls.push('https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/organisation/chairs/urban-compositions/');
+                  images.push('spatialplanning.jpg');
+                  urls.push('https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/organisation/chairs/spatial-planning-and-strategy/');
+                  var chosen = Math.floor(Math.random() * 10);
+                  if (chosen > 5) {
+                    document.write('<a href="' + urls[0] + '"><img src="' + imlocation + images[0] + '"></a>');
+                  }
+                  else {
+                    document.write('<a href="' + urls[chosen] + '"><img src="' + imlocation + images[chosen] + '"></a>');
+                  }
+                  </script>
+                </figure>
+              </article>
+            </div>
+          </div>
+          <div class="tile is-parent is-bold">
+            <article class="tile is-child notification is-danger">
+              <p class="title">Urbanism blogs</p>
+              <p class="subtitle">all our blogs in one place, gezellig!</p>
+              <div id="rss-feeds"></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-primary">
+            <div class="content">
+              <p class="title">Upcoming events</p>
+              <div class="content">
+                Bacon ipsum dolour sit amet porchetta beef turkey, bacon turducken boudin hamburger venison ball tip. 
+                Brisket pork loin bresaola short loin ground round leberkas pastrami tongue jerky cow turducken beef ribs. 
+                Pork ribeye landjaeger prosciutto pig venison tenderloin. 
+                Swine beef ribs kielbasa, porchetta tenderloin salami venison pork belly tail.
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+</section>
+
+  </body>
+</html>
