@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bulma.css">
-    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="js/jquery.rss.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
     <script>
       jQuery(function($) {
         $("#rss-feeds")
-          .rss("http://www.rssmix.com/u/8248344/rss.xml", {
+          // .rss("http://www.rssmix.com/u/8248344/rss.xml", {
+          .rss("https://3d.bk.tudelft.nl/feed.xml", {
             limit: 10,
             // effect: 'slideFastSynced',
             layoutTemplate: '{entries}',
