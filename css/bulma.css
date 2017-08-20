@@ -4081,12 +4081,12 @@ a.box:active {
 }
 
 .notification.is-primary {
-  background-color: #00d1b2;
+  background-color: #F8C01B;
   color: #fff;
 }
 
 .notification.is-info {
-  background-color: #FC00EE;
+  background-color: #6EBBEE;
   color: #fff;
 }
 
@@ -4101,7 +4101,7 @@ a.box:active {
 }
 
 .notification.is-danger {
-  background-color: #ff3860;
+  background-color: #00A6D6;
   color: #fff;
 }
 
