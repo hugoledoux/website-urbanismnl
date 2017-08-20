@@ -4081,27 +4081,27 @@ a.box:active {
 }
 
 .notification.is-primary {
-  background-color: #00A6D6; /* TUD cyaan */
+  background-color: #00d1b2;
   color: #fff;
 }
 
 .notification.is-info {
-  background-color: #6EBBEE; /* TUD hemelblauw */
+  background-color: #3273dc;
   color: #fff;
 }
 
 .notification.is-success {
-  background-color: #A5CA1A; /* TUD helgroen */
+  background-color: #23d160;
   color: #fff;
 }
 
 .notification.is-warning {
-  background-color: #F8C01B; /* TUD geel */
+  background-color: #ffdd57;
   color: rgba(0, 0, 0, 0.7);
 }
 
 .notification.is-danger {
-  background-color: #E64616; /* TUD orange */
+  background-color: #ff3860;
   color: #fff;
 }
 
