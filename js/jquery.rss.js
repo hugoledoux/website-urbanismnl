@@ -248,13 +248,14 @@
       // use it to format the date.
       var date = moment(new Date(dateString));
 
-      if (date.locale) {
-        date = date.locale(this.options.dateLocale);
-      } else {
-        date = date.lang(this.options.dateLocale);
-      }
+      // if (date.locale) {
+      //   date = date.locale(this.options.dateLocale);
+      // } else {
+      //   date = date.lang(this.options.dateLocale);
+      // }
 
-      return date.format(this.options.dateFormat);
+      return date.format("YYYY-MM-DD");
+      // return date.format(this.options.dateFormat);
     } else {
       // If all else fails, just use the date as-is.
       return dateString;

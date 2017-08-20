@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/bulma.css">
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/jquery.rss.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script src="js/moment.js"></script>
     <script>
       jQuery(function($) {
         $("#rss-feeds")
@@ -15,8 +15,10 @@
           .rss("https://3d.bk.tudelft.nl/feed.xml", {
             limit: 10,
             // effect: 'slideFastSynced',
-            layoutTemplate: '{entries}',
-            entryTemplate: '<p>{date} | <a href="{url}">{title}</a></p>'
+            // layoutTemplate: '{entries}',
+            // entryTemplate: '<p>{date} | <a href="{url}">{title}</a></p>'
+            layoutTemplate: '<table cellpadding="10"><tr><th>Date</th><th>Buffer</th><th>Title</th></tr>{entries}</table>',
+            entryTemplate:  '<tr><td>{date}</td><td> | </td><td><a href="{url}">{title}</a></td></tr>'
           })
       })
     </script>
