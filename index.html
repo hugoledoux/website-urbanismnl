@@ -61,32 +61,52 @@ title: Urbanism.nl
         </article>
       </div>
       <div class="tile">
-        <div class="tile is-parent is-vertical">
-          <article class="tile is-child notification">
-            <figure class="image">
-              <a href=""><img src="img/em.png"></a>
-            </figure>
-          </article>  
-          <article class="tile is-child notification">
-            <figure class="image">
-              <a href=""><img src="img/em.png"></a>
-            </figure>
-          </article>
+  
+          <script type="text/javascript">
+            var imlocation = "img/";
+            var images = [];
+            var urls   = [];
+            images.push('3dgi.jpg');
+            urls.push('https://3d.bk.tudelft.nl');
+            images.push('designpol.jpg');
+            urls.push('https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/organisation/chairs/design-as-politics/');
+            images.push('envtech.png');
+            urls.push('https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/organisation/chairs/environmental-technology-and-design/');
+            images.push('la.jpg');
+            urls.push('https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/organisation/chairs/landscape-architecture/');
+            images.push('urbandesign.jpg');
+            urls.push('https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/organisation/chairs/urban-compositions/');
+            images.push('spatialplanning.jpg');
+            urls.push('https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/organisation/chairs/spatial-planning-and-strategy/');
+            var randomIndexUsed = [];
+            var counter = 0;
+            var numberOfImages = 4;
+            while (counter < numberOfImages) {
+              randomIndex = Math.floor(Math.random() * images.length);
+              if (randomIndexUsed.indexOf(randomIndex) == "-1") {
+                randomIndexUsed.push(randomIndex);
+                counter++;
+              }
+            }
+            document.write('<div class="tile is-parent is-vertical">');
+            document.write('<article class="tile is-child ">');
+            document.write('<figure class="image"><a href="' + urls[randomIndexUsed[0]] + '"><img src="' + imlocation + images[randomIndexUsed[0]] + '"></a></figure>');
+            document.write('</article>');
+            document.write('<article class="tile is-child ">');
+            document.write('<figure class="image"><a href="' + urls[randomIndexUsed[1]] + '"><img src="' + imlocation + images[randomIndexUsed[1]] + '"></a></figure>');
+            document.write('</article>');
+            document.write('</div>');
+            document.write('<div class="tile is-parent is-vertical">');
+            document.write('<article class="tile is-child ">');
+            document.write('<figure class="image"><a href="' + urls[randomIndexUsed[2]] + '"><img src="' + imlocation + images[randomIndexUsed[2]] + '"></a></figure>');
+            document.write('</article>');
+            document.write('<article class="tile is-child ">');
+            document.write('<figure class="image"><a href="' + urls[randomIndexUsed[3]] + '"><img src="' + imlocation + images[randomIndexUsed[3]] + '"></a></figure>');
+            document.write('</article>');
+            document.write('</div>');
+
+          </script>
         </div>
-        <div class="tile is-parent is-vertical">
-          <article class="tile is-child notification">
-            <figure class="image">
-              <a href=""><img src="img/em.png"></a>
-            </figure>
-          </article>  
-          <article class="tile is-child notification">
-            <figure class="image">
-              <a href=""><img src="img/em.png"></a>
-            </figure>
-          </article>
-        </div>
-      </div>
-          
     </div>
 
     {% assign events = site.data.events | sort: 'date' %}
