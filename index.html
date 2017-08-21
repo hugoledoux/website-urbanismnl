@@ -13,11 +13,8 @@
       jQuery(function($) {
         $("#rss-feeds")
           .rss("http://www.rssmix.com/u/8248344/rss.xml", {
-          // .rss("https://3d.bk.tudelft.nl/feed.xml", {
             limit: 10,
-            effect: 'slideFastSynced',
-            // layoutTemplate: '{entries}',
-            // entryTemplate: '<p>{date} | <a href="{url}">{title}</a></p>'
+            // effect: 'slideFastSynced',
             layoutTemplate: '<table><tr><th>Entry</th></tr>{entries}</table>',
             entryTemplate:  '<tr><td>{date} | <a href="{url}">{title}</a></td></tr>'
           })
@@ -33,7 +30,7 @@
       <article class="tile is-child">
         <!-- <img src="urbanism-round.png"> -->
         <figure class="image">
-        <a href="https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/"><img src="img/urbanism-logo.jpg"></a>
+        <a href="https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/"><img src="img/urbanism-logo-2.png"></a>
         </figure>
       </article>
     </div>
