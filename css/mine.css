@@ -1,3 +1,4 @@
+
 .notification.is-primary {
   background-color: #00A6D6; /* TUD cyaan */
   color: #fff;
@@ -8,10 +9,6 @@
   color: #fff;
 }
 
-.notification.is-success {
-  background-color: #A5CA1A; /* TUD helgroen */
-  color: #fff;
-}
 
 .notification.is-warning {
   background-color: #F8C01B; /* TUD geel */
@@ -19,7 +16,11 @@
 }
 
 .notification.is-danger {
-  background-color: #E64616; /* TUD orange */
+  background-color: #C5BB02; /* TUD orange */
   color: #fff;
 }
 
+.notification.is-success {
+  background-color: #928E4A; /* TUD helgroen */
+  color: #fff;
+}
