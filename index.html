@@ -1,3 +1,8 @@
+---
+layout: 
+title: Urbanism.nl
+---
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -84,15 +89,15 @@
           
     </div>
 
+    {% assign events = site.data.events | sort: 'date' %}
     <div class="tile is-parent is-vertical">
       <article class="tile is-child notification is-warning">
         <div class="content">
           <p class="title">Upcoming events</p>
           <div class="content">
-            Bacon ipsum dolour sit amet porchetta beef turkey, bacon turducken boudin hamburger venison ball tip. 
-            Brisket pork loin bresaola short loin ground round leberkas pastrami tongue jerky cow turducken beef ribs. 
-            Pork ribeye landjaeger prosciutto pig venison tenderloin. 
-            Swine beef ribs kielbasa, porchetta tenderloin salami venison pork belly tail.
+          {% for i in events reversed limit:10 %}
+            <p>{{ i.date }}<br><a href="{{ i.url }}">{{ i.title }}</a></p>
+          {% endfor %}
           </div>
         </div>
       </article>
