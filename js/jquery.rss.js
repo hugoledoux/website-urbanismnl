@@ -9,7 +9,7 @@
     this.effectQueue  = [];
 
     this.options = $.extend({
-      ssl: true,
+      ssl: false,
       host: 'www.feedrapp.info',
       limit: null,
       key: null,
