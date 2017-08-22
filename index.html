@@ -21,16 +21,19 @@ title: Urbanism.nl
         $("#rss-feeds")
           .rss("http://www.rssmix.com/u/8248344/rss.xml", {
             limit: 5,
+            ssl: true,
             // effect: 'slideFastSynced',
-            layoutTemplate: '<table><tr><th>Entry</th></tr>{entries}</table>',
-            entryTemplate:  '<tr><td>{date} | <a href="{url}">{title}</a></td></tr>'
+            layoutTemplate: '<div class="content">{entries}</div>',
+            entryTemplate: '<p>{date}<br><a href="{url}">{title}</a><br></p>',
+            // layoutTemplate: '<table><tr><th>Entry</th></tr>{entries}</table>',
+            // entryTemplate:  '<tr><td>{date} | <a href="{url}">{title}</a></td></tr>'
           })
       })
     </script>
   </head>
 
   <body>
-<section class="section">
+  <section class="section">
 
   <div class="tile is-ancestor">
     <div class="tile is-5 is-parent">
@@ -101,6 +104,7 @@ title: Urbanism.nl
           <p class="title">Urbanism blogs</p>
           <p class="subtitle">all our blogs in one place, gezellig!</p>
           <div id="rss-feeds"></div>
+          <br>
           <p><a href="allblogs.html"><i class="fa fa-chevron-circle-right"></i> long list of blogs</a></p>
         </article>
       </div>
