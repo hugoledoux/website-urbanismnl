@@ -13,14 +13,14 @@
       jQuery(function($) {
         $("#rss-feeds")
           .rss("http://www.rssmix.com/u/8248344/rss.xml", {
-          // .rss("https://3d.bk.tudelft.nl/feed.xml", {
             limit: 100,
+            ssl: true,
             // effect: 'slideFastSynced',
-            // layoutTemplate: '{entries}',
-            // entryTemplate: '<p>{date} | <a href="{url}">{title}</a></p>'
-            layoutTemplate: '<table><tr><th>Entry</th></tr>{entries}</table>',
-            entryTemplate:  '<tr><td>{date} | <a href="{url}">{title}</a></td></tr>'
-          })
+            layoutTemplate: '<div class="content">{entries}</div>',
+            entryTemplate: '<p>{date}<br><a href="{url}">{title}</a><br></p>',
+            // layoutTemplate: '<table><tr><th>Entry</th></tr>{entries}</table>',
+            // entryTemplate:  '<tr><td>{date} | <a href="{url}">{title}</a></td></tr>'
+        })
       })
     </script>
   </head>
