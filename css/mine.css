@@ -24,3 +24,7 @@
   background-color: #928E4A; /* TUD helgroen */
   color: #fff;
 }
+
+.tile {
+  flex: 1 1 auto; /* IE fix */
+}
