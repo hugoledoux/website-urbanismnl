@@ -58,9 +58,9 @@ title: Urbanism.nl
     </div>
   </div>
       
-  <div class="tile is-ancestor">
+  <div class="tile is-ancestor" style="flex: 1 1 auto;">
     <div class="tile is-vertical is-8">
-      <div class="tile">
+      <div class="tile" style="flex: 1 1 auto;">
         <script type="text/javascript">
           var imlocation = "img/";
           var images = [];
@@ -88,24 +88,24 @@ title: Urbanism.nl
             }
           }
           document.write('<div class="tile is-parent is-vertical">');
-          document.write('<article class="tile is-child ">');
+          document.write('<article class="tile is-child" style="flex: 1 1 auto;">');
           document.write('<figure class="image"><a href="' + urls[randomIndexUsed[0]] + '"><img src="' + imlocation + images[randomIndexUsed[0]] + '"></a></figure>');
           document.write('</article>');
-          document.write('<article class="tile is-child ">');
+          document.write('<article class="tile is-child" style="flex: 1 1 auto;">');
           document.write('<figure class="image"><a href="' + urls[randomIndexUsed[1]] + '"><img src="' + imlocation + images[randomIndexUsed[1]] + '"></a></figure>');
           document.write('</article>');
           document.write('</div>');
           document.write('<div class="tile is-parent is-vertical">');
-          document.write('<article class="tile is-child ">');
+          document.write('<article class="tile is-child" style="flex: 1 1 auto;">');
           document.write('<figure class="image"><a href="' + urls[randomIndexUsed[2]] + '"><img src="' + imlocation + images[randomIndexUsed[2]] + '"></a></figure>');
           document.write('</article>');
-          document.write('<article class="tile is-child ">');
+          document.write('<article class="tile is-child" style="flex: 1 1 auto;">');
           document.write('<figure class="image"><a href="' + urls[randomIndexUsed[3]] + '"><img src="' + imlocation + images[randomIndexUsed[3]] + '"></a></figure>');
           document.write('</article>');
           document.write('</div>');
         </script>
       </div>
-      <div class="tile is-parent is-bold">
+      <div class="tile is-parent is-bold"  style="flex: 1 1 auto;">
         <article class="tile is-child notification is-primary">
           <p class="title">Urbanism blogs</p>
           <p class="subtitle">all our blogs in one place, gezellig!</p>
@@ -118,7 +118,7 @@ title: Urbanism.nl
 
     {% assign events = site.data.events | sort: 'date' %}
     <div class="tile is-parent is-vertical">
-      <article class="tile is-child notification is-warning">
+      <article class="tile is-child notification is-warning" style="flex: 1 1 auto;">
         <div class="content">
           <p class="title">Upcoming events</p>
           <div class="content">
@@ -129,7 +129,7 @@ title: Urbanism.nl
         </div>
       </article>
       <div class="tile is-vertical">
-        <article class="tile is-child notification is-danger">
+        <article class="tile is-child notification is-danger" style="flex: 1 1 auto;">
         <a href="https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/education/">
           <div class="content">
             <p class="title">Education</p>
@@ -137,7 +137,7 @@ title: Urbanism.nl
           </div>  
         </a>            
         </article>
-        <article class="tile is-child notification is-success">
+        <article class="tile is-child notification is-success" style="flex: 1 1 auto;">
         <a href="https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/research/">
           <div class="content">
             <p class="title">Research</p>
@@ -150,7 +150,7 @@ title: Urbanism.nl
   </div>
       
   <div class="tile">
-    <article class="tile is-child notification has-text-centered is-info">
+    <article class="tile is-child notification has-text-centered is-info" style="flex: 1 1 auto;">
       <a href="https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/contact/"><i class="fa fa-map-marker"></i></a> &#xfeff; 
       <!-- <a href="https://twitter.com/urbamismtudelft"><i class="fa fa-snapchat"></i></a> &#xfeff;  -->
       <a href="https://twitter.com/UrbanismTUDelft"><i class="fa fa-twitter"></i></a> &#xfeff; 
