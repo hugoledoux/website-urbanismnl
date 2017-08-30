@@ -123,7 +123,11 @@ title: Urbanism.nl
           <p class="title">Upcoming events</p>
           <div class="content">
           {% for i in events reversed limit:10 %}
-            <p>{{ i.date }}<br><a href="{{ i.url }}">{{ i.title }}</a></p>
+            {% if i.url %}
+              <p>{{ i.date }}<br><a href="{{ i.url }}">{{ i.title }}</a></p>
+            {% else %}
+              <p>{{ i.date }}<br>{{ i.title }}</p>
+            {% endif %}
           {% endfor %}
           </div>
         </div>
