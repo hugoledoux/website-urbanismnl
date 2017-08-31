@@ -122,12 +122,16 @@ title: Urbanism.nl
         <div class="content">
           <p class="title">Upcoming events</p>
           <div class="content">
-          {% for i in events reversed limit:10 %}
+          {% assign today = 'now' | date: "%s" %}
+          {% for i in events limit:7 %}
+          {% assign a = i.date | date: "%s" %}
+          {% if a >= today %}
             {% if i.url %}
               <p>{{ i.date }}<br><a href="{{ i.url }}">{{ i.title }}</a></p>
             {% else %}
               <p>{{ i.date }}<br>{{ i.title }}</p>
             {% endif %}
+          {% endif %}
           {% endfor %}
           </div>
         </div>
