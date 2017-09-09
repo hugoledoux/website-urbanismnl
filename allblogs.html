@@ -12,15 +12,48 @@
     <script>
       jQuery(function($) {
         $("#rss-feeds")
+          // .rss("http://www.rssmix.com/u/8248344/rss.xml", {
           .rss("http://www.rssmix.com/u/8251159/rss.xml", {
             limit: 100,
             ssl: true,
             // effect: 'slideFastSynced',
             layoutTemplate: '<div class="content">{entries}</div>',
-            entryTemplate: '<p>{date}<br><a href="{url}">{title}</a><br></p>',
-            // layoutTemplate: '<table><tr><th>Entry</th></tr>{entries}</table>',
-            // entryTemplate:  '<tr><td>{date} | <a href="{url}">{title}</a></td></tr>'
-        })
+            entryTemplate: '<p>{date} | {chairinitials}<br><a href="{url}">{title}</a><br></p>',
+            tokens: {
+              chairinitials: function(entry, tokens){ 
+                var string = "3d.bk";
+                var i = {};
+                i['spatialplanning'] = 'Spatial Planning';
+                i['3d.bk.'] = '3D geoinfo';
+                i['urbanfabrics'] = 'Urban Fabrics';
+                i['howdoyoulandscape'] = 'How Do You Landscape';
+                i['designaspolitics.nl'] = 'Design as Politics';
+                i['emurbanism.wordpress.com'] = 'EMU';
+                i['deltaurbanismtudelft.org'] = 'Delta';
+                i['janejacobs100.co'] = 'Jane Jacobs 100';
+                i['utctudelft.org'] = 'UTC';
+                i['summerschooltudelft.org'] = 'Summer School Urbanism';
+                i['complexcitiesstudio'] = 'Complex Cities Studio';
+                i['methodologyforurbanism.wordpress.com'] = 'Methodology for Urbanism';
+                i['confrontinginformality.org'] = 'Confronting Informality';
+                i['inclusivecitiestudelft.wordpress.com'] = 'Inclusive Cities';
+                var thatone = '----';
+                var j = 0;
+                for (var k in i) {
+                  if (entry.link.indexOf(k) !== -1) {
+                    // console.log(entry.title);
+                    thatone = i[k];
+                    break;
+                  }
+                  // else {
+                    // console.log(entry.link);
+                  // }
+                  j++;
+                }
+                return thatone;
+              }
+            },
+          })
       })
     </script>
   </head>
@@ -33,7 +66,7 @@
       <div class="tile is-parent is-bold">
         <article class="tile is-child notification is-primary">
           <p class="title">Urbanism news</p>
-          <p class="subtitle">all our news in one place, gezellig!</p>
+          <!-- <p class="subtitle">all our news in one place, gezellig!</p> -->
           <div id="rss-feeds"></div>
         </article>
       </div>
