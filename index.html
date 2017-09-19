@@ -62,6 +62,18 @@ title: Urbanism.nl
           })
       })
     </script>
+    <script>
+      jQuery(function($) {
+        $("#rss-feeds-mailchimp")
+          .rss("http://us3.campaign-archive1.com/feed?u=a4ed435b741e5de08dd95551a&id=104eb3fe38", {
+            limit: 3,
+            // ssl: true,
+            // effect: 'slideFastSynced',
+            layoutTemplate: '{entries}',
+            entryTemplate: '<a href="{url}">{date}</a><br>'
+          })
+      })
+    </script>
   </head>
 
   <body>
@@ -169,6 +181,13 @@ title: Urbanism.nl
         </div>
       </article>
       <div class="tile is-vertical">
+        <article class="tile is-child notification is-info" style="flex: 1 1 auto;">
+          <div class="content">
+            <p class="title">Announcements</p>
+            <div id="rss-feeds-mailchimp"></div>          
+          </div>
+        </article>
+
         <article class="tile is-child notification is-danger" style="flex: 1 1 auto;">
         <a href="https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/education/">
           <div class="content">
@@ -177,6 +196,7 @@ title: Urbanism.nl
           </div>  
         </a>            
         </article>
+
         <article class="tile is-child notification is-success" style="flex: 1 1 auto;">
         <a href="https://www.tudelft.nl/en/architecture-and-the-built-environment/about-the-faculty/departments/urbanism/research/">
           <div class="content">
@@ -188,6 +208,7 @@ title: Urbanism.nl
       </div>
     </div>
   </div>
+
       
   <div class="tile">
     <article class="tile is-child notification has-text-centered is-info" style="flex: 1 1 auto;">
