@@ -14,7 +14,7 @@
         $("#rss-feeds")
           // .rss("http://www.rssmix.com/u/8248344/rss.xml", {
           .rss("http://www.rssmix.com/u/8271087/rss.xml", {
-            limit: 100,
+            limit: 13,
             ssl: true,
             // effect: 'slideFastSynced',
             layoutTemplate: '<div class="content">{entries}</div>',
@@ -39,11 +39,12 @@
                 i['inclusivecitiestudelft.wordpress.com'] = 'Inclusive Cities';
                 i['urbanism.weblog.tudelft.nl'] = 'Urbanism secretariat';
                 i['humanspace.weblog.tudelft.nl'] = 'Human Space';
+                i['h2020repair.eu'] = 'H2020 REPAiR';
                 var thatone = '----';
                 var j = 0;
                 for (var k in i) {
                   if (entry.link.indexOf(k) !== -1) {
-                    // console.log(entry.title);
+                    console.log(entry.title);
                     thatone = i[k];
                     break;
                   }
