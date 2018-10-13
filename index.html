@@ -55,6 +55,7 @@ title: Urbanism.nl
                 i['inclusivecitiestudelft.wordpress.com'] = 'Inclusive Cities';
                 i['urbanism.weblog.tudelft.nl'] = 'Urbanism secretariat';
                 i['humanspace.weblog.tudelft.nl'] = 'Human Space';
+                i['h2020repair.eu'] = 'H2020 REPAiR';
                 var thatone = '----';
                 var j = 0;
                 for (var k in i) {
@@ -77,9 +78,9 @@ title: Urbanism.nl
     <script>
       jQuery(function($) {
         $("#rss-feeds-mailchimp")
-          .rss("http://us3.campaign-archive1.com/feed?u=a4ed435b741e5de08dd95551a&id=104eb3fe38", {
+          .rss("https://us3.campaign-archive.com/feed?u=a4ed435b741e5de08dd95551a&id=104eb3fe38", {
             limit: 3,
-            // ssl: true,
+            ssl: true,
             // effect: 'slideFastSynced',
             layoutTemplate: '{entries}',
             entryTemplate: '<a href="{url}">{date}</a><br>'
